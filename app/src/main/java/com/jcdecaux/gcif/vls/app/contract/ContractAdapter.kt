@@ -2,6 +2,7 @@ package com.jcdecaux.gcif.vls.app.contract
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.jcdecaux.gcif.vls.R
@@ -17,12 +18,14 @@ class ContractAdapter(
         private var contracts: List<Contract>
 ) : RecyclerView.Adapter<ContractAdapter.ViewHolder>() {
 
+    private val mInflater = LayoutInflater.from(context)
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(contracts[position])
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val view = View.inflate(context, R.layout.contract_item, null)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = mInflater.inflate(R.layout.contract_item, parent, false)
         return ViewHolder(view)
     }
 

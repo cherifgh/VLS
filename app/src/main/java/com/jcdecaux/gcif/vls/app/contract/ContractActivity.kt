@@ -52,6 +52,7 @@ class ContractActivity : AppCompatActivity(), ContractContract.View {
     private fun initWidgets() {
         mAdapter = ContractAdapter(this, listOf())
 
+        recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = mAdapter
 
