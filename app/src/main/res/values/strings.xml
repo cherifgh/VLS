@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">VLS</string>
+    <string name="base_url">https://api.jcdecaux.com/vls/v1</string>
+    <string name="api_key">36d40c2b8d0d0c2557e5d91ace40abd6948f5c01</string>
 </resources>
